@@ -13,11 +13,14 @@ If check divides evenly into num, tell that to the user. If not, print a differe
 
 
 def even_or_odd(num: int) -> str:
-    pass
+    #number = int(input('Digite o numero'))
+    return "even" if num%2==0 else "odd"
 
-
-
-
+"""if num % 2 == 0:
+        print(f'{num} é par')
+    else:
+        print(f'{num} é impar')"""
+ 
 
 
 
@@ -30,8 +33,8 @@ def even_or_odd(num: int) -> str:
 
 # Test inputs for even_or_odd
 print(even_or_odd(2))      # Even
-print(even_or_odd(3))      # Odd
+print(even_or_odd(3))     # Odd
 print(even_or_odd(4))      # Multiple of 4
-print(even_or_odd(0))      # Edge case: zero
+print(even_or_odd(0))     # Edge case: zero
 print(even_or_odd(-1))     # Negative odd
-print(even_or_odd(-4))     # Negative multiple of 4
+print(even_or_odd(-4))   # Negative multiple of 4

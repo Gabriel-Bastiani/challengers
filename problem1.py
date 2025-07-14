@@ -12,18 +12,38 @@ Print out that many copies of the previous message on separate lines. (Hint: the
 
 """
 
-def determine_100_years(name: str, age: int, repeat: int = 1) -> str:
-    pass
+
+from pkgutil import get_data
+from datetime import datetime as getdate
 
 
+def determine_100_years(name: str, age: int, repeat: int = 1) -> None:
+    resultado = calculo(age)
+    print(f'A menssagem sera repetida {repeat}')
+    for _ in range(repeat):
+        print(f'{name} completará 100 anos em {resultado}')
+    print()
+    return None
+    
+    
+def calculo(idade: int) -> int:
+    ano_atual= getdate.today().year
+    #aqui eu to fazendo o calculo do ano que a pessoa vai completar 100 anos
+    result = ano_atual + (100 - idade)
+    #print(f'{name}, você completará 100 anos em {result}.\n')
+    return result
+        
+     
+    
 
-
+    
+    
 
 
 
 # Test inputs for determine_100_years
-print(determine_100_years("Alice", 25))
-print(determine_100_years("Bob", 50, 3))
-print(determine_100_years("Charlie", 99, 1))
-print(determine_100_years("Dana", 0, 2))
-print(determine_100_years("Eve", 100, 5))
+determine_100_years("Alice", 25)
+determine_100_years("Bob", 50, 3)
+determine_100_years("Charlie", 99, 1)
+determine_100_years("Dana", 0, 2)
+determine_100_years("Eve", 100, 5)
